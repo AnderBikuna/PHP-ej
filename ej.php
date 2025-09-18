@@ -47,6 +47,24 @@
          }
         }
     ?>
+
+    <h6> Ariketa 1.5 </h6>
+    <form method = "post">
+        <input type = "number" name = "adina" placeholder = "sartu adina">
+        <input type = "submit" value = "Bidali">
+    </form>
+    <?php
+       if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $adina = $_POST["adina"];
+      
+        if ($adina > 17){
+            $baimendutako_mezua = "Gure lokalera sartu ahal zara";
+        } else {
+            $baimendutako_mezua = "Ezin zara lokalara sartu";
+        }
+            echo $baimendutako_mezua;
+        }
+    ?>
 </body>
 </html>
 
